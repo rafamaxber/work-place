@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { add } from '@fish-place/core'
+import { add } from '@work-place/core'
 
 import logo from './logo.svg'
 import './App.css'

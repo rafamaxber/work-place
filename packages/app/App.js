@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import { add } from '@fish-place/core'
+import { add } from '@work-place/core'
 
 export default class App extends React.Component {
   render() {

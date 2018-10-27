@@ -1,5 +1,5 @@
 {
-  "name": "@fish-place/web",
+  "name": "@work-place/web",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -8,7 +8,7 @@
     "react-scripts": "1.1.4"
   },
   "dependencies": {
-    "@fish-place/core": "1.0.0",
+    "@work-place/core": "1.0.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
   },

@@ -1,0 +1,44 @@
+version: '2'
+
+services:
+#   db:
+#     container_name: work-place-mongo
+#     image: mongo:latest
+#     environment:
+#       MONGO_INITDB_ROOT_USERNAME: root
+#       MONGO_INITDB_ROOT_PASSWORD: root
+#     volumes:
+#       - ./data:/data/db
+#     ports:
+#       - "27017:27017"
+
+  server:
+    container_name: "fishplace-server.br"
+    build:
+      context: .
+      dockerfile: ./packages/server/Dockerfile
+    image: work-place/server
+    working_dir: /api
+#    depends_on:
+#     - db
+    volumes:
+      - ./:/api/
+      - ./packages/server/dev.sh:/api/dev.sh
+    ports:
+      - "3000:3000"
+    command: /api/dev.sh
+
+  # web:
+  #   container_name: "fishplace-web.br"
+  #   build:
+  #     context: ./packages/web
+  #     dockerfile: Dockerfile
+  #     args:
+  #       APP_ENV: development
+  #   image: work-place/web
+  #   depends_on:
+  #     - api
+  #   volumes:
+  #     - ./packages/web:/app/web/
+  #   ports:
+  #     - "3000:3000"

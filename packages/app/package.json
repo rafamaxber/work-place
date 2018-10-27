@@ -22,7 +22,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "@fish-place/core": "1.0.0",
+    "@work-place/core": "1.0.0",
     "expo": "^27.0.1",
     "react": "16.3.1",
     "react-native": "~0.55.2"
