@@ -15,18 +15,16 @@ services:
   server:
     container_name: "fishplace-server.br"
     build:
-      context: .
-      dockerfile: ./packages/server/Dockerfile
+      context: ./packages/server
     image: work-place/server
     working_dir: /api
 #    depends_on:
 #     - db
     volumes:
       - ./:/api/
-      - ./packages/server/dev.sh:/api/dev.sh
     ports:
       - "3000:3000"
-    command: /api/dev.sh
+    command: yarn start
 
   # web:
   #   container_name: "fishplace-web.br"

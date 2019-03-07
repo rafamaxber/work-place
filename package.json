@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "start": "yarn workspace @work-place/web start",
     "precommit": "lint-staged"
   },
   "workspaces": [
